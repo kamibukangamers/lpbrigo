@@ -204,7 +204,7 @@ export default function App() {
           >
             <div className="absolute -inset-10 bg-blue-400/10 blur-[100px] rounded-full -z-10" />
             <img
-              src="/imagehero.png"
+              src="/lpbrigo/imagehero.png"
               alt="Remit.go App Mockup"
               className="w-full h-auto drop-shadow-2xl"
               referrerPolicy="no-referrer"
@@ -236,62 +236,62 @@ export default function App() {
             {/* List 10 Banner - Ganti src dengan file Anda di folder public */}
             <SwiperSlide>
               <div className="aspect-3/4 w-full rounded-2xl overflow-hidden shadow-lg">
-                <img src="/1.png" className="w-full h-full object-cover" alt="Banner 1" />
+                <img src="/lpbrigo/1.png" className="w-full h-full object-cover" alt="Banner 1" />
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
               <div className="aspect-3/4 w-full rounded-2xl overflow-hidden shadow-lg">
-                <img src="/2.png" className="w-full h-full object-cover" alt="Banner 2" />
+                <img src="/lpbrigo/2.png" className="w-full h-full object-cover" alt="Banner 2" />
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
               <div className="aspect-3/4 w-full rounded-2xl overflow-hidden shadow-lg">
-                <img src="/3.png" className="w-full h-full object-cover" alt="Banner 3" />
+                <img src="/lpbrigo/3.png" className="w-full h-full object-cover" alt="Banner 3" />
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
               <div className="aspect-3/4 w-full rounded-2xl overflow-hidden shadow-lg">
-                <img src="/4.png" className="w-full h-full object-cover" alt="Banner 4" />
+                <img src="/lpbrigo/4.png" className="w-full h-full object-cover" alt="Banner 4" />
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
               <div className="aspect-3/4 w-full rounded-2xl overflow-hidden shadow-lg">
-                <img src="/5.png" className="w-full h-full object-cover" alt="Banner 4" />
+                <img src="/lpbrigo/5.png" className="w-full h-full object-cover" alt="Banner 4" />
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
               <div className="aspect-3/4 w-full rounded-2xl overflow-hidden shadow-lg">
-                <img src="/6.png" className="w-full h-full object-cover" alt="Banner 4" />
+                <img src="/lpbrigo/6.png" className="w-full h-full object-cover" alt="Banner 4" />
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
               <div className="aspect-3/4 w-full rounded-2xl overflow-hidden shadow-lg">
-                <img src="/7.png" className="w-full h-full object-cover" alt="Banner 4" />
+                <img src="/lpbrigo/7.png" className="w-full h-full object-cover" alt="Banner 4" />
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
               <div className="aspect-3/4 w-full rounded-2xl overflow-hidden shadow-lg">
-                <img src="/8.png" className="w-full h-full object-cover" alt="Banner 4" />
+                <img src="/lpbrigo/8.png" className="w-full h-full object-cover" alt="Banner 4" />
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
               <div className="aspect-3/4 w-full rounded-2xl overflow-hidden shadow-lg">
-                <img src="/9.png" className="w-full h-full object-cover" alt="Banner 4" />
+                <img src="/lpbrigo/9.png" className="w-full h-full object-cover" alt="Banner 4" />
               </div>
             </SwiperSlide>
 
             {/* Lanjutkan sampai Banner 10 */}
             <SwiperSlide>
               <div className="aspect-3/4 w-full rounded-2xl overflow-hidden shadow-lg">
-                <img src="/10.png" className="w-full h-full object-cover" alt="Banner 10" />
+                <img src="/lpbrigo/10.png" className="w-full h-full object-cover" alt="Banner 10" />
               </div>
             </SwiperSlide>
 
