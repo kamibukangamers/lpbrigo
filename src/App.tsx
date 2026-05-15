@@ -450,7 +450,7 @@ export default function App() {
               className="relative rounded-3xl overflow-hidden shadow-2xl"
             >
               <img
-                src="/src/assets/images/remit_hk_office_1778655934868.png"
+                src="/lpbrigo/remitbrigo.png"
                 alt="Remit.go HK Branch"
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
