@@ -358,7 +358,7 @@ export default function App() {
           >
             <div className="absolute -inset-10 bg-blue-50/50 rounded-full blur-3xl -z-10" />
             <img
-              src="/gambar3brigo.png"
+              src="gambar3brigo.png"
               alt="Steps Illustration"
               className="w-full max-w-lg mx-auto drop-shadow-xl"
               referrerPolicy="no-referrer"
