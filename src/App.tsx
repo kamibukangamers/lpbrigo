@@ -127,7 +127,7 @@ export default function App() {
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-2">
               {/* Logo diletakkan langsung di depan teks */}
-              <img src="/logobrigo.png" alt="Logo" className="h-8 w-auto" />
+              <img src="/lpbrigo/logobrigo.png" alt="Logo" className="h-8 w-auto" />
               <span className="text-xl font-bold tracking-tight text-[#003b9c]">Remit.go</span>
             </div>
           </div>
@@ -656,7 +656,7 @@ export default function App() {
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-2">
               {/* Logo diletakkan langsung di depan teks */}
-              <img src="/logobrigo.png" alt="Logo" className="h-8 w-auto" />
+              <img src="/lpbrigo/logobrigo.png" alt="Logo" className="h-8 w-auto" />
               <span className="text-xl font-bold tracking-tight text-[#003b9c]">Remit.go</span>
             </div>
           </div>
