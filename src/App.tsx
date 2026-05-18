@@ -190,8 +190,8 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 bg-[#003b9c] text-white px-5 py-2.5 rounded-xl font-bold hover:scale-105 transition-transform shadow-lg shadow-blue-200/50"
               >
-                <div className="bg-white/20 p-1 rounded-lg">
-                  <Zap className="w-5 h-5 fill-current" />
+                <div className="p-0.5 rounded-lg">
+                  <img src="/lpbrigo/playstore.png" alt="Play Store" className="w-6 h-6 object-contain" />
                 </div>
                 <div className="text-left font-sans">
                   <p className="text-[9px] uppercase opacity-75 leading-none mb-1">Download di</p>
@@ -205,8 +205,8 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 bg-slate-900 text-white px-5 py-2.5 rounded-xl font-bold hover:scale-105 transition-transform shadow-lg shadow-slate-900/10"
               >
-                <div className="bg-white/10 p-1 rounded-lg">
-                  <Smartphone className="w-5 h-5" />
+                <div className="p-0.5 rounded-lg">
+                  <img src="/lpbrigo/appstore.png" alt="App Store" className="w-6 h-6 object-contain" />
                 </div>
                 <div className="text-left font-sans">
                   <p className="text-[9px] uppercase opacity-75 leading-none mb-1">Download di</p>
@@ -414,8 +414,8 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 bg-white text-[#003b9c] px-6 py-3 rounded-xl font-bold hover:scale-105 transition-transform shadow-lg shadow-black/10 hover:shadow-white/10"
               >
-                <div className="bg-blue-50 p-1 rounded-lg">
-                  <Zap className="w-5 h-5 fill-[#003b9c] text-[#003b9c]" />
+                <div className="p-0.5 rounded-lg">
+                  <img src="/lpbrigo/playstore.png" alt="Play Store" className="w-6 h-6 object-contain" />
                 </div>
                 <div className="text-left font-sans">
                   <p className="text-[10px] uppercase opacity-75 leading-none mb-1">Download di</p>
@@ -429,8 +429,8 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 bg-white/10 border border-white/20 text-white px-6 py-3 rounded-xl font-bold hover:scale-105 transition-transform shadow-lg shadow-black/10 hover:bg-white/20"
               >
-                <div className="bg-white/10 p-1 rounded-lg">
-                  <Smartphone className="w-5 h-5" />
+                <div className="p-0.5 rounded-lg">
+                  <img src="/lpbrigo/appstore.png" alt="App Store" className="w-6 h-6 object-contain" />
                 </div>
                 <div className="text-left font-sans">
                   <p className="text-[10px] uppercase opacity-75 leading-none mb-1">Download di</p>
@@ -564,8 +564,8 @@ export default function App() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 bg-[#003b9c] text-white px-6 py-3 rounded-xl font-bold hover:scale-105 transition-transform"
                 >
-                  <div className="bg-white/20 p-1 rounded-lg">
-                    <Zap className="w-5 h-5 fill-current" />
+                  <div className="p-0.5 rounded-lg">
+                    <img src="/lpbrigo/playstore.png" alt="Play Store" className="w-6 h-6 object-contain" />
                   </div>
                   <div className="text-left">
                     <p className="text-[10px] uppercase opacity-70 leading-none mb-1">Download di</p>
@@ -579,8 +579,8 @@ export default function App() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 bg-slate-800 border border-slate-700 text-white px-6 py-3 rounded-xl font-bold hover:scale-105 transition-transform"
                 >
-                  <div className="bg-white/10 p-1 rounded-lg">
-                    <Smartphone className="w-5 h-5" />
+                  <div className="p-0.5 rounded-lg">
+                    <img src="/lpbrigo/appstore.png" alt="App Store" className="w-6 h-6 object-contain" />
                   </div>
                   <div className="text-left">
                     <p className="text-[10px] uppercase opacity-70 leading-none mb-1">Download di</p>
@@ -834,8 +834,8 @@ export default function App() {
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button className="flex items-center gap-3 bg-[#003b9c] text-white px-8 py-3.5 rounded-2xl font-bold hover:scale-105 transition-transform">
-                <div className="bg-white/20 p-1 rounded-lg">
-                  <Zap className="w-5 h-5 fill-current" />
+                <div className="p-0.5 rounded-lg">
+                  <img src="/lpbrigo/playstore.png" alt="Play Store" className="w-6 h-6 object-contain" />
                 </div>
                 <div className="text-left">
                   <p className="text-[10px] uppercase opacity-70 leading-none mb-1">Download di</p>
@@ -844,8 +844,8 @@ export default function App() {
               </button>
 
               <button className="flex items-center gap-3 bg-slate-800 border border-slate-700 text-white px-8 py-3.5 rounded-2xl font-bold hover:scale-105 transition-transform">
-                <div className="bg-white/10 p-1 rounded-lg">
-                  <Smartphone className="w-5 h-5" />
+                <div className="p-0.5 rounded-lg">
+                  <img src="/lpbrigo/appstore.png" alt="App Store" className="w-6 h-6 object-contain" />
                 </div>
                 <div className="text-left">
                   <p className="text-[10px] uppercase opacity-70 leading-none mb-1">Download di</p>
