@@ -103,48 +103,32 @@ const trustSlides = [
   }
 ];
 
-const TestimonialSlider = () => {
-  const [current, setCurrent] = useState(0);
-
-  return (
-    <div className="relative">
-      <div className="overflow-hidden">
-        <motion.div
-          key={current}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -20 }}
-          className="bg-slate-800 p-8 rounded-3xl border border-slate-700 min-h-[220px] flex flex-col justify-center"
-        >
-          <div className="flex items-center gap-4 mb-6">
-            <img
-              src={testimonials[current].avatar}
-              alt={testimonials[current].name}
-              className="w-14 h-14 rounded-full border-2 border-slate-700 bg-slate-700 p-0.5"
-            />
-            <div>
-              <p className="font-bold text-white text-lg">{testimonials[current].name}</p>
-              <p className="text-sm text-slate-400 font-medium">{testimonials[current].role}</p>
-            </div>
-          </div>
-          <p className="italic text-slate-200 text-lg leading-relaxed font-light">
-            "{testimonials[current].content}"
-          </p>
-        </motion.div>
-      </div>
-
-      <div className="flex gap-2 mt-6">
-        {testimonials.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`h-2 rounded-full transition-all duration-300 ${current === i ? 'w-8 bg-blue-400' : 'w-2 bg-slate-700'}`}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
+const branches = [
+  {
+    name: "Pusat Causeway Bay",
+    address: "Shop B, G/F, Keswick Mansion, 57 Keswick Street, Causeway Bay, Hong Kong",
+    tel: "+852 2881 9224",
+    hours: "Senin - Minggu: 09:00 - 18:00"
+  },
+  {
+    name: "Cabang Yuen Long",
+    address: "Shop 3, G/F, Yuen Long Commercial Centre, 18-24 Kau Yuk Road, Yuen Long, Hong Kong",
+    tel: "+852 2478 9338",
+    hours: "Senin - Minggu: 09:00 - 18:00"
+  },
+  {
+    name: "Cabang Tsuen Wan",
+    address: "G/F, 123 Sha Tsui Road, Tsuen Wan, New Territories, Hong Kong",
+    tel: "+852 2498 9332",
+    hours: "Senin - Minggu: 09:00 - 18:00"
+  },
+  {
+    name: "Cabang Mong Kok",
+    address: "Shop A, G/F, 78 Argyle Street, Mong Kok, Kowloon, Hong Kong",
+    tel: "+852 2398 9334",
+    hours: "Senin - Minggu: 09:00 - 18:00"
+  }
+];
 
 export default function App() {
   return (
@@ -195,31 +179,62 @@ export default function App() {
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-4">
-              <button className="flex items-center gap-2 bg-[#003b9c] text-white px-8 py-4 rounded-xl font-semibold shadow-lg shadow-blue-200 hover:-translate-y-1 transition-transform">
+            <div className="flex flex-wrap gap-4 items-center mb-8">
+              <button className="flex items-center gap-2 bg-[#003b9c] text-white px-6 py-3.5 rounded-xl font-bold shadow-lg shadow-blue-200 hover:scale-105 transition-transform">
                 <Download className="w-5 h-5" /> Mulai Sekarang
               </button>
-              <div className="flex items-center gap-2">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3].map(i => (
-                    <img
-                      key={i}
-                      src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${i * 123}`}
-                      alt="User"
-                      className="w-8 h-8 rounded-full border-2 border-white"
-                    />
-                  ))}
+
+              <a
+                href="https://play.google.com/store"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 bg-[#003b9c] text-white px-5 py-2.5 rounded-xl font-bold hover:scale-105 transition-transform shadow-lg shadow-blue-200/50"
+              >
+                <div className="bg-white/20 p-1 rounded-lg">
+                  <Zap className="w-5 h-5 fill-current" />
                 </div>
-                <div className="ml-2">
-                  <div className="flex text-amber-400">
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                  </div>
-                  <p className="text-xs text-slate-500 font-medium whitespace-nowrap">4.9/5 dari 50rb+ PMI</p>
+                <div className="text-left font-sans">
+                  <p className="text-[9px] uppercase opacity-75 leading-none mb-1">Download di</p>
+                  <p className="text-sm leading-none">Google Play</p>
                 </div>
+              </a>
+
+              <a
+                href="https://apps.apple.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 bg-slate-900 text-white px-5 py-2.5 rounded-xl font-bold hover:scale-105 transition-transform shadow-lg shadow-slate-900/10"
+              >
+                <div className="bg-white/10 p-1 rounded-lg">
+                  <Smartphone className="w-5 h-5" />
+                </div>
+                <div className="text-left font-sans">
+                  <p className="text-[9px] uppercase opacity-75 leading-none mb-1">Download di</p>
+                  <p className="text-sm leading-none">App Store</p>
+                </div>
+              </a>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <div className="flex -space-x-2">
+                {[1, 2, 3].map(i => (
+                  <img
+                    key={i}
+                    src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${i * 123}`}
+                    alt="User"
+                    className="w-8 h-8 rounded-full border-2 border-white"
+                  />
+                ))}
+              </div>
+              <div className="ml-2">
+                <div className="flex text-amber-400">
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                </div>
+                <p className="text-xs text-slate-500 font-medium whitespace-nowrap">4.9/5 dari 50rb+ PMI</p>
               </div>
             </div>
           </motion.div>
@@ -506,8 +521,27 @@ export default function App() {
                 Remit.go merupakan partner resmi Bank Rakyat Indonesia (BRI) di Hong Kong. Kami menjamin setiap transaksi diawasi oleh otoritas keuangan kedua negara.
               </p>
 
-              <div className="space-y-6 mb-10">
-                <TestimonialSlider />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                {branches.map((branch, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-slate-800/60 border border-slate-700/40 p-4.5 rounded-2xl flex flex-col justify-between hover:border-blue-500/50 hover:bg-slate-800/80 transition-all duration-300"
+                  >
+                    <div>
+                      <div className="flex items-center gap-2 mb-2 text-blue-400 font-bold">
+                        <Building2 className="w-4 h-4" />
+                        <span className="text-xs tracking-wide">{branch.name}</span>
+                      </div>
+                      <p className="text-[11px] text-slate-300 leading-relaxed font-light mb-4">
+                        {branch.address}
+                      </p>
+                    </div>
+                    <div className="border-t border-slate-700/40 pt-2.5 flex justify-between text-[9px] text-slate-400 font-medium">
+                      <span>Tel: {branch.tel}</span>
+                      <span className="text-emerald-400">{branch.hours}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
 
               <div className="flex items-center gap-8">
@@ -680,6 +714,60 @@ export default function App() {
             <button className="mt-12 bg-white text-[#060202] px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-colors shadow-xl">
               Ambil Promonya Sekarang
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial Section (Terpisah) */}
+      <section className="bg-slate-50 py-20 px-6 border-y border-slate-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <div className="inline-block bg-blue-50 text-[#003b9c] font-bold text-xs uppercase px-4 py-1.5 rounded-full mb-4">
+              Testimoni Pengguna
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Apa Kata Mereka yang Menggunakan Remit.go?
+            </h2>
+            <p className="text-slate-600">
+              Lebih dari 50.000+ Pekerja Migran Indonesia (PMI) di Hong Kong telah mempercayakan pengiriman uang mereka bersama kami.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((t, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg shadow-slate-100/50 flex flex-col justify-between hover:-translate-y-2 transition-transform duration-300"
+              >
+                <div>
+                  <div className="flex text-amber-400 gap-1 mb-6">
+                    <Star className="w-5 h-5 fill-current" />
+                    <Star className="w-5 h-5 fill-current" />
+                    <Star className="w-5 h-5 fill-current" />
+                    <Star className="w-5 h-5 fill-current" />
+                    <Star className="w-5 h-5 fill-current" />
+                  </div>
+                  <p className="text-slate-700 italic text-lg leading-relaxed mb-6 font-light">
+                    "{t.content}"
+                  </p>
+                </div>
+                <div className="flex items-center gap-4 pt-6 border-t border-slate-100">
+                  <img
+                    src={t.avatar}
+                    alt={t.name}
+                    className="w-12 h-12 rounded-full border border-slate-100 bg-slate-100"
+                  />
+                  <div>
+                    <p className="font-bold text-slate-900 leading-none mb-1">{t.name}</p>
+                    <p className="text-xs text-slate-500 font-medium">{t.role}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
