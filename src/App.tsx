@@ -245,7 +245,7 @@ export default function App() {
       <div className="w-full py-16 bg-slate-50 border-t border-slate-100 px-6">
         <div className="max-w-7xl mx-auto">
 
-          <h2 className="text-3xl font-bold text-slate-900 mb-10">Promo Spesial (10 Banner)</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-10">Promo Spesial </h2>
 
           {/* Swiper Container */}
           <Swiper
