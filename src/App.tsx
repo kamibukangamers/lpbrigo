@@ -521,14 +521,14 @@ export default function App() {
               >
                 {trustSlides.map((slide, idx) => (
                   <SwiperSlide key={idx}>
-                    <div className="relative aspect-[3/4] w-full overflow-hidden">
+                    <div className="relative aspect-3/4 w-full overflow-hidden">
                       <img
                         src={slide.image}
                         alt={slide.title}
                         className="w-full h-full object-cover"
                         referrerPolicy="no-referrer"
                       />
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-8 pt-16">
+                      <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/90 via-black/40 to-transparent p-8 pt-16">
                         <p className="flex items-center gap-2 text-white font-medium text-lg mb-1">
                           <Building2 className="w-5 h-5 text-blue-400" /> {slide.title}
                         </p>
