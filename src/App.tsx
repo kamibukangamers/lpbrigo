@@ -772,6 +772,38 @@ export default function App() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="bg-slate-900 py-20 px-6 border-y border-slate-800">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-block bg-blue-900/50 text-blue-400 font-bold text-xs uppercase px-4 py-1.5 rounded-full mb-4 border border-blue-400/20">
+              Tutorial & Panduan
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Lebih Dekat dengan Remit.go
+            </h2>
+            <p className="text-slate-400 mb-12">
+              Tonton video singkat berikut untuk melihat betapa mudahnya mengirim uang ke Indonesia menggunakan aplikasi Remit.go.
+            </p>
+            
+            <div className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl shadow-blue-900/20 border border-slate-700 bg-slate-800">
+              <iframe 
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/y9j-BL5ocW8" 
+                title="Tutorial Menggunakan Remit.go" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <Section>
         <div className="max-w-3xl mx-auto">
