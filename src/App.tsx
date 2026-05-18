@@ -75,6 +75,34 @@ const testimonials = [
   }
 ];
 
+const trustSlides = [
+  {
+    image: "/lpbrigo/remitbrigo.png",
+    title: "Kantor Cabang Hong Kong",
+    desc: "Siap melayani keluhan dan bantuan tatap muka 7 hari seminggu."
+  },
+  {
+    image: "/lpbrigo/1.png",
+    title: "Layanan Aman & Terpercaya",
+    desc: "Keamanan data dan dana terjamin dengan sistem enkripsi perbankan tingkat tinggi."
+  },
+  {
+    image: "/lpbrigo/2.png",
+    title: "Didukung Penuh oleh BRI",
+    desc: "Partner resmi Bank Rakyat Indonesia (BRI) untuk jaminan kepastian transaksi."
+  },
+  {
+    image: "/lpbrigo/3.png",
+    title: "Transaksi Instan",
+    desc: "Kirim uang ke semua bank dan e-wallet hanya dalam hitungan detik saja."
+  },
+  {
+    image: "/lpbrigo/4.png",
+    title: "Setor Tunai Mudah",
+    desc: "Praktis setor tunai kapan saja lewat jaringan kasir 7-Eleven terdekat di seluruh Hong Kong."
+  }
+];
+
 const TestimonialSlider = () => {
   const [current, setCurrent] = useState(0);
 
@@ -441,26 +469,75 @@ export default function App() {
                   <p className="text-xs text-slate-500 uppercase tracking-widest mt-1">PMI Aktif</p>
                 </div>
               </div>
+
+              {/* CTA Download App Buttons */}
+              <div className="flex flex-wrap gap-4 mt-10">
+                <a
+                  href="https://play.google.com/store"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 bg-[#003b9c] text-white px-6 py-3 rounded-xl font-bold hover:scale-105 transition-transform"
+                >
+                  <div className="bg-white/20 p-1 rounded-lg">
+                    <Zap className="w-5 h-5 fill-current" />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-[10px] uppercase opacity-70 leading-none mb-1">Download di</p>
+                    <p className="text-base leading-none">Google Play</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://apps.apple.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 bg-slate-800 border border-slate-700 text-white px-6 py-3 rounded-xl font-bold hover:scale-105 transition-transform"
+                >
+                  <div className="bg-white/10 p-1 rounded-lg">
+                    <Smartphone className="w-5 h-5" />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-[10px] uppercase opacity-70 leading-none mb-1">Download di</p>
+                    <p className="text-base leading-none">App Store</p>
+                  </div>
+                </a>
+              </div>
             </motion.div>
 
+            {/* Slider Foto Cabang & Fitur */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative rounded-3xl overflow-hidden shadow-2xl"
+              className="relative rounded-3xl overflow-hidden shadow-2xl w-full border border-slate-800 bg-slate-900/50"
             >
-              <img
-                src="/lpbrigo/remitbrigo.png"
-                alt="Remit.go HK Branch"
-                className="w-full h-auto"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-8">
-                <p className="flex items-center gap-2 text-white font-medium">
-                  <Building2 className="w-4 h-4 text-blue-400" /> Kantor Cabang Hong Kong
-                </p>
-                <p className="text-sm text-slate-300">Siap melayani keluhan dan bantuan tatap muka 7 hari seminggu.</p>
-              </div>
+              <Swiper
+                modules={[Autoplay, Pagination]}
+                autoplay={{ delay: 4000, disableOnInteraction: false }}
+                pagination={{ clickable: true }}
+                spaceBetween={0}
+                slidesPerView={1}
+                className="w-full h-full trust-swiper"
+              >
+                {trustSlides.map((slide, idx) => (
+                  <SwiperSlide key={idx}>
+                    <div className="relative aspect-[3/4] w-full overflow-hidden">
+                      <img
+                        src={slide.image}
+                        alt={slide.title}
+                        className="w-full h-full object-cover"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-8 pt-16">
+                        <p className="flex items-center gap-2 text-white font-medium text-lg mb-1">
+                          <Building2 className="w-5 h-5 text-blue-400" /> {slide.title}
+                        </p>
+                        <p className="text-sm text-slate-300 leading-relaxed">{slide.desc}</p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </motion.div>
           </div>
         </Section>
