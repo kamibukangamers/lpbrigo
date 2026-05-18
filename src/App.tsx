@@ -887,7 +887,9 @@ export default function App() {
             </div>
 
             <a
-              href="#"
+              href="https://wa.me/85252920848"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 text-slate-300 hover:text-white transition-colors group"
             >
               <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
